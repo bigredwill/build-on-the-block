@@ -75,7 +75,7 @@ const reducer = (state, action) => {
     }
 
     case "reset": {
-      console.log('reset')
+      console.log("reset");
       return readLocalStorage();
     }
 
@@ -114,9 +114,7 @@ export function Home() {
     <>
       <div class="grid" style="">
         <div class="rounds team">
-          <div class="empty">
-            {/* {roundView} */}
-            </div>
+          <div class="empty"></div>
           <button class="empty" onClick={() => setRoundView(-1)}>
             <img src={poster} />
           </button>
@@ -138,19 +136,16 @@ export function Home() {
               </p>
             </button>
           ))}
-          {/* <button class="cell"><p>Round<br/>1</p></button>
-          <button class="cell"><p>Round<br/>2</p></button>
-          <button class="cell"><p>Round<br/>3</p></button>
-          <button class="cell"><p>Round<br/>4</p></button>
-          <button class="cell"><p>Round<br/>5</p></button>
-          <button class="cell"><p>Round<br/>6</p></button> */}
-          <button class="cell" onClick={() => {
-                if (roundView === 6) {
-                  setRoundView(-1);
-                } else {
-                  setRoundView(6);
-                }
-              }}>
+          <button
+            class="cell"
+            onClick={() => {
+              if (roundView === 6) {
+                setRoundView(-1);
+              } else {
+                setRoundView(6);
+              }
+            }}
+          >
             <p>Totals</p>
           </button>
         </div>
